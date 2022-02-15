@@ -1,0 +1,45 @@
+img {
+    height: 1rem;
+    width: 1rem;
+    margin-right: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+}
+
+.pomodoro {
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+.pomodoro-buttons {
+    display: flex;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+.button-header {
+    display: flex;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    opacity: 0.7;
+    padding: 8px 12px;
+    margin-left: 25px;
+    font-size: 13px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+    border: none;
+}
