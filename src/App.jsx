@@ -1,11 +1,13 @@
 import './App.css'
 
 import Header from './components/Header/Header'
+import Timer from './components/Timer/Timer'
 
 const App = () => {
   return (
     <div>
-      <Header></Header>
+      <Header />
+      <Timer />
     </div>
   )
 }
