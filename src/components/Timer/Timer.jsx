@@ -48,7 +48,7 @@ const Timer = (props) => {
             </div>
             <div className="timer-start">
                 <button className="start" onClick={() => running ? pause() : start()}>
-                    {running ? "PAUSE" : "START"}
+                    {running ? "PAUSE" : "STARaT"}
                 </button>
             </div>
         </div>
