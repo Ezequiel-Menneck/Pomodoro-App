@@ -5,20 +5,20 @@ const Header = (props) => {
         <div className="header">
             <div className="pomodoro">
                 <a href="">
-                    <img src="src\imgs\icon-white.png" alt="" /> Pomodoro
+                    <img src="src\medias\icon-white.png" alt="" /> Pomodoro
                 </a>
             </div>
             <div className="pomodoro-buttons">
                 <button className="button-header">
-                    <img src="src\imgs\graph-white.png" alt="Report" /> 
+                    <img src="src\medias\graph-white.png" alt="Report" /> 
                     <p> Report</p>
                 </button>
                 <button className="button-header">
-                    <img src="src\imgs\config-white.png" alt="Settings" /> 
+                    <img src="src\medias\config-white.png" alt="Settings" /> 
                     <p> Settings</p>
                 </button>
                 <button className="button-header">
-                    <img src="src\imgs\user-white.png" alt="Login" />
+                    <img src="src\medias\user-white.png" alt="Login" />
                     <p> Login</p>
                 </button>
             </div>

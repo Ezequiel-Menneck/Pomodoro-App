@@ -1,9 +1,9 @@
 import './Divisor.css'
 
-const Divisor = () => {
+const Divisor = (props) => {
     return (
         <>
-            <hr className='divisor' />
+            <hr className='divisor' style={{width: props.width, border: props.border}} />
         </>
     )
 }

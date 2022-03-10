@@ -3,3 +3,47 @@
     flex-direction: column;
     align-items: center;
 }
+
+.um {
+    margin: 10px;
+    opacity: 0.4;
+    color: white;
+}
+
+.focus {
+    color: white;
+    font-size: 17px;
+}
+
+.task-main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 32rem;
+    margin: 10px 0 10px 0;
+}
+
+.span-task {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    align-items: center;
+}
+
+.button-task {
+    justify-content: center;
+    display: flex;
+    background: none rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 13px;
+    padding: 8px;
+    opacity: 0.9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.img-task {
+    display: flex;
+    margin-left: 2px;
+}

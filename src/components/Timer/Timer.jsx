@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Timer.css";
 
-const COUNTDOWN_TIME_SECONDS = 5; // 25 minutos em segundos
+const COUNTDOWN_TIME_SECONDS = 25 * 60; // 25 minutos em segundos
 
 const Timer = (props) => {
     const [secondsAmount, setSecondsAmount] = useState(COUNTDOWN_TIME_SECONDS);
@@ -18,19 +18,18 @@ const Timer = (props) => {
         }, 1000);
         setIntervalId(newIntervalId);
     };
-
+    
     const pause = () => {
         setRunning(0)
         clearInterval(intervalId)
     }
-
+    
     useEffect(() => {
         if (minutes === 0 && seconds === 0) {
             clearInterval(intervalId);
             setSecondsAmount(COUNTDOWN_TIME_SECONDS)
             setRunning(0)
         }
-        console.log(secondsAmount, minutes, seconds)
     }, [secondsAmount]);
 
     return (
