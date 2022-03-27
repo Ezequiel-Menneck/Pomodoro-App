@@ -1,0 +1,135 @@
+.addTask-main {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 32rem;
+    height: 4rem;
+    background: none rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    opacity: 0.8;
+    border: 2px dashed rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+.addTask-img {
+    margin-right: 8px;
+}
+
+.addTask-text {
+    color: white;
+    opacity: 0.8;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+/* ------------------------------------------------------------ 
+    Formulario
+--------------------------------------------------------------*/
+
+.addTask-form {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 32rem;
+    width: 32rem;
+    height: 14rem;
+    background-color: white;
+    justify-content: flex-start;
+    border: none;
+    border-radius: 5px 5px 0 0;
+}
+
+.addTask-input {
+    width: 32rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 22px;
+    font-style: italic;
+    opacity: 0.3;
+}
+
+.addTask-input:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.addTask-work {
+    max-height: 0rem;
+}
+
+.addTask-text2 {
+    color: black;
+    font-weight: bold;
+    padding-left: 1rem;
+}
+
+.addTask-formCount {
+    padding-left: 1rem;
+    max-height: 4rem;
+}
+
+.addTask-inputCount {
+    width: 4rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 18px;
+    background-color: rgb(239, 239, 239)
+}
+
+.addForm-button:nth-child(2) {
+    margin: 0 0.5rem 0 1rem;
+}
+
+.addForm-button {
+    height: 2.3rem;
+    width: 2.3rem;
+    border: 1px solid rgb(223, 223, 223);
+    box-shadow: rgb(0 0 0 / 20%) 0px 2px 2px;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.addForm-img {
+    margin: 2px 0 0 2px;
+    width: 10px;
+    opacity: 0.6;
+}
+
+.addTask-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 32rem;
+    height: 4rem;
+    background-color: rgb(239, 239, 239);
+    border-radius: 0 0 5px 5px;
+}
+
+.addTask-button-cancel {
+    width: 4rem;
+    border: none;
+    background-color: none;
+    opacity: 0.6;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.addTask-button-save {
+    width: 4rem;
+    border: none;
+    background-color: rgb(171, 171, 171);
+    margin: 8px 12px;
+    opacity: 0.9;
+    border-radius: 4px;
+    color: white;
+    min-width: 60px;
+    min-height: 40px;
+    cursor: pointer;
+}
