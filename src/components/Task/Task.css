@@ -1,0 +1,40 @@
+.tasks-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 32rem;
+    height: 3.5rem;
+    max-height: 10rem;
+    margin: 8px 0 8px 0;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.tasks-text {
+    margin-left: 2rem;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.tasks-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    border: 1px solid rgb(223, 223, 223);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.tasks-button:hover {
+    background-color: rgb(206, 206, 206);
+}
+
+.tasks-button img {
+    opacity: 0.5;
+    margin-left: 2.2px;
+    cursor: pointer;
+}
