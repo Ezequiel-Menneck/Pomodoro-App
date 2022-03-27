@@ -20,14 +20,14 @@
     justify-content: space-between;
     width: 100%;
     max-width: 32rem;
-    margin: 10px 0 10px 0;
+    margin: 8px 0 8px 0;
 }
 
 .span-task {
+    margin-top: 5px;
     font-size: 20px;
     font-weight: 700;
     color: white;
-    align-items: center;
 }
 
 .button-task {
@@ -46,4 +46,29 @@
 .img-task {
     display: flex;
     margin-left: 2px;
+}
+
+.addTask-main {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 32rem;
+    height: 4rem;
+    background: none rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    opacity: 0.8;
+    border: 2px dashed rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+.addTask-img {
+    margin-right: 8px;
+}
+
+.addTask-text {
+    color: white;
+    opacity: 0.8;
+    font-weight: bold;
+    margin-top: 2px;
 }
