@@ -3,6 +3,7 @@ import { useState } from "react";
 
 const AddTask = (props) => {
     const [isVisible, setIsVisible] = useState(true);
+    const [amountOfTask, setAmountOfTask] = useState(1)
 
     return (
         <>
@@ -32,17 +33,21 @@ const AddTask = (props) => {
                         <div className="addTask-formCount">
                             <input
                                 type="number"
-                                value="1"
+                                value={amountOfTask}
                                 className="addTask-inputCount"
                             />
-                            <button className="addForm-button">
+                            <button className="addForm-button"
+                                onClick={() => setAmountOfTask(amountOfTask + 1)}
+                            >
                                 <img
                                     src="src\medias\caret-up.png"
                                     alt="Up"
                                     className="addForm-img"
                                 />
                             </button>
-                            <button className="addForm-button">
+                            <button className="addForm-button"
+                                onClick={() => setAmountOfTask(amountOfTask - 1)}
+                            >
                                 <img
                                     className="addForm-img"
                                     src="src\medias\caret-down.png"
