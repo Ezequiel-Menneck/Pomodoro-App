@@ -32,7 +32,7 @@
     flex-wrap: wrap;
     max-width: 32rem;
     width: 32rem;
-    height: 14rem;
+    height: 13rem;
     background-color: white;
     justify-content: flex-start;
     border: none;
@@ -68,8 +68,8 @@
 }
 
 .addTask-formCount {
-    padding-left: 1rem;
-    max-height: 4rem;
+    margin: 1rem 0 0 1rem;
+    max-height: 3rem;
 }
 
 .addTask-inputCount {
@@ -107,7 +107,7 @@
     justify-content: flex-end;
     align-items: center;
     width: 32rem;
-    height: 4rem;
+    height: 3.5rem;
     background-color: rgb(239, 239, 239);
     border-radius: 0 0 5px 5px;
 }
