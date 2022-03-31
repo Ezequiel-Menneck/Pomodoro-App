@@ -5,8 +5,16 @@ import Timer from "./components/Timer/Timer";
 import Divisor from "./components/Divisor/Divisor";
 import AddTask from "./components/AddTask/AddTask";
 import Task from "./components/Task/Task";
+import { useState } from 'react';
 
 const App = () => {
+
+    const [cebola, setCebola] = useState([])
+    const changeCebola = (text) => {
+        setCebola([...cebola, text])
+        // console.log(cebola)
+    }
+
     return (
         <div className="main">
             <Header />
@@ -33,8 +41,8 @@ const App = () => {
                 border="0.3px solid rgba(255, 255, 255, 0.6)"
                 marginBottom="1rem"
             />
-            <Task text="Olá" />
-            <AddTask />
+            <Task cebola={cebola} />
+            <AddTask cebola={cebola} changeCebola={changeCebola} />
         </div>
     );
 };
