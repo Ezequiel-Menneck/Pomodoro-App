@@ -3,8 +3,8 @@ import { useState } from "react";
 
 const AddTask = ({ changeTextOfTask }) => {
     const [isVisible, setIsVisible] = useState(true);
-    const [amountOfTask, setAmountOfTask] = useState(1)
-    const [textTask, setTextTask] = useState('')
+    const [amountOfTask, setAmountOfTask] = useState(1);
+    const [textTask, setTextTask] = useState("");
 
     return (
         <>
@@ -31,38 +31,24 @@ const AddTask = ({ changeTextOfTask }) => {
                                 value={textTask}
                                 onChange={(e) => setTextTask(e.target.value)}
                             />
-                            <p className="addTask-text2">Est Pomodoros</p>
-                        </div>
-                        <div className="addTask-formCount">
-                            <input
-                                type="number"
-                                value={amountOfTask}
-                                className="addTask-inputCount"
-                            />
-                            <button className="addForm-button"
-                                onClick={() => setAmountOfTask(amountOfTask + 1)}
-                            >
-                                <img
-                                    src="src\medias\caret-up.png"
-                                    alt="Up"
-                                    className="addForm-img"
-                                />
-                            </button>
-                            <button className="addForm-button"
-                                onClick={() => setAmountOfTask(amountOfTask - 1)}
-                            >
-                                <img
-                                    className="addForm-img"
-                                    src="src\medias\caret-down.png"
-                                    alt="Down"
-                                />
-                            </button>
                         </div>
                     </div>
                     <div className="addTask-buttons">
                         <button
+                            className="addTask-button-delete"
+                            onClick={() => {
+                                setIsVisible(true);
+                                setTextTask("");
+                            }}
+                        >
+                            Delete
+                        </button>
+                        <button
                             className="addTask-button-cancel"
-                            onClick={() => { setIsVisible(true); setTextTask('') }}
+                            onClick={() => {
+                                setIsVisible(true);
+                                setTextTask("");
+                            }}
                         >
                             Cancel
                         </button>
