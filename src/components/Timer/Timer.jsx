@@ -3,7 +3,7 @@ import "./Timer.css";
 
 const COUNTDOWN_TIME_SECONDS = 25 * 60; // 25 minutos em segundos
 
-const Timer = (props) => {
+const Timer = () => {
     const [secondsAmount, setSecondsAmount] = useState(COUNTDOWN_TIME_SECONDS);
     const [intervalId, setIntervalId] = useState(0);
     const [running, setRunning] = useState(0)
