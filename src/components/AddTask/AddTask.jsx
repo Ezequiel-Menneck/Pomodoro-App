@@ -1,20 +1,10 @@
 import "./AddTask.css";
 import { useState } from "react";
 
-const AddTask = ({cebola, changeCebola}) => {
+const AddTask = ({ changeTextOfTask }) => {
     const [isVisible, setIsVisible] = useState(true);
     const [amountOfTask, setAmountOfTask] = useState(1)
     const [textTask, setTextTask] = useState('')
-
-    const valueChangeTask = (e) => {
-        setTextTask(e.target.value)
-    }
-
-    const sexo = () => {
-        changeCebola(textTask)
-        // console.log('sexo')
-        // console.log(cebola)
-    }
 
     return (
         <>
@@ -39,7 +29,7 @@ const AddTask = ({cebola, changeCebola}) => {
                                 placeholder="What are you working on?"
                                 className="addTask-input"
                                 value={textTask}
-                                onChange={valueChangeTask}
+                                onChange={(e) => setTextTask(e.target.value)}
                             />
                             <p className="addTask-text2">Est Pomodoros</p>
                         </div>
@@ -78,7 +68,7 @@ const AddTask = ({cebola, changeCebola}) => {
                         </button>
                         <button
                             className="addTask-button-save"
-                            onClick={() => sexo()}
+                            onClick={() => changeTextOfTask(textTask)}
                         >
                             Save
                         </button>

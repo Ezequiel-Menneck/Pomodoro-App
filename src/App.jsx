@@ -9,10 +9,9 @@ import { useState } from 'react';
 
 const App = () => {
 
-    const [cebola, setCebola] = useState([])
-    const changeCebola = (text) => {
-        setCebola([...cebola, text])
-        // console.log(cebola)
+    const [textOfTask, setTextOfTask] = useState([])
+    const changeTextOfTask = (text) => {
+        setTextOfTask([...textOfTask, text])
     }
 
     return (
@@ -41,8 +40,8 @@ const App = () => {
                 border="0.3px solid rgba(255, 255, 255, 0.6)"
                 marginBottom="1rem"
             />
-            <Task cebola={cebola} />
-            <AddTask cebola={cebola} changeCebola={changeCebola} />
+            <Task text={textOfTask} />
+            <AddTask textOfTask={textOfTask} changeTextOfTask={changeTextOfTask} />
         </div>
     );
 };

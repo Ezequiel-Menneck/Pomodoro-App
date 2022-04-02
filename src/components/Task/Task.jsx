@@ -1,12 +1,12 @@
 import "./Task.css";
 
-const Task = ({ cebola }) => {
+const Task = ({ text }) => {
     return (
         <>
-            {cebola.map((c) => (
+            {text.map((t) => (
                 <div className="tasks-main">
                     <div>
-                        <p className="tasks-text">{c}</p>
+                        <p className="tasks-text">{t}</p>
                     </div>
                     <button className="tasks-button">
                         <img src="src\medias\vertical-ellipsis.png" alt="" />
