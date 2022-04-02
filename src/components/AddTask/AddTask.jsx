@@ -3,7 +3,6 @@ import { useState } from "react";
 
 const AddTask = ({ changeTextOfTask }) => {
     const [isVisible, setIsVisible] = useState(true);
-    const [amountOfTask, setAmountOfTask] = useState(1);
     const [textTask, setTextTask] = useState("");
 
     return (
