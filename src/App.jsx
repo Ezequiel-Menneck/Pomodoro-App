@@ -5,14 +5,19 @@ import Timer from "./components/Timer/Timer";
 import Divisor from "./components/Divisor/Divisor";
 import AddTask from "./components/AddTask/AddTask";
 import Task from "./components/Task/Task";
-import { useState } from 'react';
+import { useState } from "react";
 
 const App = () => {
+    const [textOfTask, setTextOfTask] = useState([]);
+    const [textTask, setTextTask] = useState("");
 
-    const [textOfTask, setTextOfTask] = useState([])
     const changeTextOfTask = (text) => {
-        setTextOfTask([...textOfTask, text])
-    }
+        setTextOfTask([...textOfTask, text]);
+    };
+
+    const editTextOfTask = (text) => {
+        setTextTask(text)
+    };
 
     return (
         <div className="main">
@@ -40,8 +45,13 @@ const App = () => {
                 border="0.3px solid rgba(255, 255, 255, 0.6)"
                 marginBottom="1rem"
             />
-            <Task text={textOfTask} />
-            <AddTask textOfTask={textOfTask} changeTextOfTask={changeTextOfTask} />
+            <Task text={textOfTask} editText={editTextOfTask} />
+            <AddTask
+                changeTextOfTask={changeTextOfTask}
+                editTextOfTask={editTextOfTask}
+                textTask={textTask}
+                setTextTask={setTextTask}
+            />
         </div>
     );
 };

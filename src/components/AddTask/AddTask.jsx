@@ -1,9 +1,8 @@
 import "./AddTask.css";
 import { useState } from "react";
 
-const AddTask = ({ changeTextOfTask }) => {
+const AddTask = ({ changeTextOfTask, editTextOfTask, textTask, setTextTask }) => {
     const [isVisible, setIsVisible] = useState(true);
-    const [textTask, setTextTask] = useState("");
 
     return (
         <>
@@ -45,15 +44,19 @@ const AddTask = ({ changeTextOfTask }) => {
                         <button
                             className="addTask-button-cancel"
                             onClick={() => {
-                                setIsVisible(true);
+                                // setIsVisible(true);
                                 setTextTask("");
+                                editTextOfTask("a")
                             }}
                         >
                             Cancel
                         </button>
                         <button
                             className="addTask-button-save"
-                            onClick={() => changeTextOfTask(textTask)}
+                            onClick={() => {
+                                changeTextOfTask(textTask);
+                                setTextTask("");
+                            }}
                         >
                             Save
                         </button>

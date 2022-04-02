@@ -1,6 +1,6 @@
 import "./Task.css";
 
-const Task = ({ text }) => {
+const Task = ({ text, editText }) => {
     return (
         <>
             {text.map((t) => (
@@ -8,7 +8,7 @@ const Task = ({ text }) => {
                     <div>
                         <p className="tasks-text">{t}</p>
                     </div>
-                    <button className="tasks-button">
+                    <button className="tasks-button" onClick={() => editText(t)}>
                         <img src="src\medias\vertical-ellipsis.png" alt="" />
                     </button>
                 </div>
