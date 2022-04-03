@@ -1,8 +1,10 @@
 import "./AddTask.css";
 import { useState } from "react";
 
-const AddTask = ({ changeTextOfTask, editTextOfTask, textTask, setTextTask }) => {
+const AddTask = ({ setTask, editTask, textTask, setTextTask, isEdit }) => {
     const [isVisible, setIsVisible] = useState(true);
+
+    // console.log(isEdit)
 
     return (
         <>
@@ -44,9 +46,8 @@ const AddTask = ({ changeTextOfTask, editTextOfTask, textTask, setTextTask }) =>
                         <button
                             className="addTask-button-cancel"
                             onClick={() => {
-                                // setIsVisible(true);
+                                setIsVisible(true);
                                 setTextTask("");
-                                editTextOfTask("a")
                             }}
                         >
                             Cancel
@@ -54,7 +55,11 @@ const AddTask = ({ changeTextOfTask, editTextOfTask, textTask, setTextTask }) =>
                         <button
                             className="addTask-button-save"
                             onClick={() => {
-                                changeTextOfTask(textTask);
+                                {
+                                    isEdit
+                                        ? editTask(textTask)
+                                        : setTask(textTask);
+                                }
                                 setTextTask("");
                             }}
                         >

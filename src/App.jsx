@@ -10,13 +10,26 @@ import { useState } from "react";
 const App = () => {
     const [textOfTask, setTextOfTask] = useState([]);
     const [textTask, setTextTask] = useState("");
+    const [isEdit, setIsEdit] = useState(false);
+    const [taskEdit, setTaskEdit] = useState();
 
-    const changeTextOfTask = (text) => {
+    const setTask = (text) => {
         setTextOfTask([...textOfTask, text]);
+        setIsEdit(false);
+        console.log('setTask')
     };
 
-    const editTextOfTask = (text) => {
-        setTextTask(text)
+    const editTask = (text) => {
+        setTextOfTask();
+        setIsEdit(false);
+        console.log(textOfTask[taskEdit])
+    };
+    
+    const editTextOfTask = (text, i) => {
+        setTextTask(text);
+        setIsEdit(true);
+        setTaskEdit(i)
+        console.log(textOfTask[i], i, textOfTask)
     };
 
     return (
@@ -45,12 +58,14 @@ const App = () => {
                 border="0.3px solid rgba(255, 255, 255, 0.6)"
                 marginBottom="1rem"
             />
-            <Task text={textOfTask} editText={editTextOfTask} />
+            <Task text={textOfTask} editTextOfTask={editTextOfTask} />
             <AddTask
-                changeTextOfTask={changeTextOfTask}
+                setTask={setTask}
                 editTextOfTask={editTextOfTask}
                 textTask={textTask}
                 setTextTask={setTextTask}
+                editTask={editTask}
+                isEdit={isEdit}
             />
         </div>
     );
