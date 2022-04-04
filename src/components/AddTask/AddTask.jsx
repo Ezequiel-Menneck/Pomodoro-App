@@ -4,8 +4,6 @@ import { useState } from "react";
 const AddTask = ({ setTask, editTask, textTask, setTextTask, isEdit }) => {
     const [isVisible, setIsVisible] = useState(true);
 
-    // console.log(isEdit)
-
     return (
         <>
             {isVisible ? (
