@@ -13,15 +13,13 @@ const App = () => {
     const [isEdit, setIsEdit] = useState(false);
     const [taskEdit, setTaskEdit] = useState();
 
-    console.log(taskEdit, "sexo")
-
     const setTask = (text) => {
         setTextOfTask([...textOfTask, text]);
         setIsEdit(false);
     };
 
     const editTask = (text) => {
-        const newTextOfTaks = structuredClone(textOfTask)
+        const newTextOfTaks = [...textOfTask]
         newTextOfTaks[taskEdit] = text
         setTextOfTask(newTextOfTaks);
         setIsEdit(false);
