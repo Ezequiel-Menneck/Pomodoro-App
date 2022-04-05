@@ -43,10 +43,14 @@
     margin-left: 1rem;
     width: 1.8rem;
     height: 1.8rem;
-    border: 2px solid blue;
-    background-color: blue;
+    border: 2px solid rgb(217, 85, 80);
+    background-color: rgb(217, 85, 80);
     border-radius: 50%;
     cursor: pointer;
+}
+
+.tasks-display-img {
+    margin-left: 3px;
 }
 
 .tasks-button {
