@@ -6,13 +6,14 @@ const Task = ({ text, editTextOfTask }) => {
     const [isSelected, setIsSelected] = useState(true)
     const [styleSelected, setStyleSelected] = useState("tasks-box-img")
 
-    const addClass = () => {
-        setStyleSelected("tasks-box-img__selected")
-        console.log("add")
-    }
-
-    const removeClass = () => {
-        console.log("remove")
+    const toggleClass = () => {
+        if(isSelected) {
+            setStyleSelected("tasks-box-img__selected")
+            setIsSelected(false)
+        } else {
+            setStyleSelected("tasks-box-img")
+            setIsSelected(true)
+        }
     }
 
     return (
@@ -20,7 +21,7 @@ const Task = ({ text, editTextOfTask }) => {
             {text.map((t, i) => (
                 <div className="tasks-main" key={i}>
                     <div className="tasks-display">
-                        <button className={styleSelected} onClick={() => isSelected ? addClass() : removeClass()}>
+                        <button className={styleSelected} onClick={() => toggleClass()}>
                             <img
                                 src="src\medias\tick.png"
                                 alt=""
