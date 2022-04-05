@@ -9,12 +9,44 @@
     margin: 0 0 8px 0;
     border-radius: 4px;
     background-color: white;
+    border-left: 8px solid black;
+}
+
+.tasks-display {
+    display: flex;
+    align-items: center;
 }
 
 .tasks-text {
-    margin-left: 2rem;
+    margin-left: 0.5rem;
     font-weight: bold;
     opacity: 0.8;
+}
+
+.tasks-box-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 2px solid rgb(223, 223, 223);
+    background-color: rgb(223, 223, 223);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.tasks-box-img__selected {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 2px solid blue;
+    background-color: blue;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .tasks-button {
