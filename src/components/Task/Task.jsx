@@ -1,19 +1,10 @@
 import "./Task.css";
-import { useState } from 'react';
 
 const Task = ({ text, editTextOfTask }) => {
 
-    const [isSelected, setIsSelected] = useState(true)
-    const [styleSelected, setStyleSelected] = useState("tasks-box-img")
-
-    const toggleClass = () => {
-        if(isSelected) {
-            setStyleSelected("tasks-box-img__selected")
-            setIsSelected(false)
-        } else {
-            setStyleSelected("tasks-box-img")
-            setIsSelected(true)
-        }
+    const toggleClass = (e) => {
+        e.target.classList.toggle("tasks-box-img__selected")
+        console.log('EBIEBO')
     }
 
     return (
@@ -21,11 +12,12 @@ const Task = ({ text, editTextOfTask }) => {
             {text.map((t, i) => (
                 <div className="tasks-main" key={i}>
                     <div className="tasks-display">
-                        <button className={styleSelected} onClick={() => toggleClass()}>
+                        <button className="tasks-box-img" onClick={(e) => toggleClass(e)}>
                             <img
                                 src="src\medias\tick.png"
                                 alt=""
                                 className="tasks-display-img"
+                                style={{marginLeft: "3px"}}
                             />
                         </button>
                         <p className="tasks-text">{t}</p>

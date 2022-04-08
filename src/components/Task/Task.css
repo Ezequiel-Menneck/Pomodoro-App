@@ -68,9 +68,3 @@
 .tasks-button:hover {
     background-color: rgb(206, 206, 206);
 }
-
-.tasks-button img {
-    opacity: 0.5;
-    margin-left: 2.2px;
-    cursor: pointer;
-}
