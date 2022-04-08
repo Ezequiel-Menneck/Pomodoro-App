@@ -31,6 +31,13 @@ const App = () => {
         setTaskEdit(i)
     };
 
+    const deleteTextOfText = (text) => {
+        const newTextOfTask = [...textOfTask]
+        newTextOfTask.slice()
+        setTextOfTask(newTextOfTask);
+        setIsEdit(false);
+    }
+
     return (
         <div className="main">
             <Header />
@@ -64,6 +71,7 @@ const App = () => {
                 textTask={textTask}
                 setTextTask={setTextTask}
                 editTask={editTask}
+                deleteTextOfText={deleteTextOfText}
                 isEdit={isEdit}
             />
         </div>
