@@ -10,11 +10,11 @@ const Header = () => {
             </div>
             <div className="pomodoro-buttons">
                 <button className="button-header">
-                    <img src="src\medias\graph-white.png" alt="Report" /> 
+                    <img src="src\medias\graph-white.png" alt="Report" />
                     <p> Report</p>
                 </button>
                 <button className="button-header">
-                    <img src="src\medias\config-white.png" alt="Settings" /> 
+                    <img src="src\medias\config-white.png" alt="Settings" />
                     <p> Settings</p>
                 </button>
                 <button className="button-header">
