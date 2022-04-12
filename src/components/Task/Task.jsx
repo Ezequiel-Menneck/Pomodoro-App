@@ -3,7 +3,6 @@ import "./Task.css";
 const Task = ({ text, editTextOfTask }) => {
     const toggleClass = (e) => {
         e.target.classList.toggle("tasks-box-img__selected");
-        console.log("EBIEBO");
     };
 
     return (
@@ -11,12 +10,13 @@ const Task = ({ text, editTextOfTask }) => {
             {text.map((t, i) => (
                 <div className="tasks-main" key={i}>
                     <div className="tasks-display">
-                        <img
-                            src="src\medias\tick.png"
-                            alt=""
-                            className="tasks-box-img"
-                            onClick={(e) => toggleClass(e)}
-                        />
+                        <div className="tasks-box-img" onClick={(e) => toggleClass(e)}>
+                            <img
+                                src="src\medias\tick.png"
+                                alt=""
+                                className="tasks-display-img"
+                            />
+                        </div>
                         <p className="tasks-text">{t}</p>
                     </div>
                     <button

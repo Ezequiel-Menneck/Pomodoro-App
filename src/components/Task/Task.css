@@ -51,6 +51,7 @@
 
 .tasks-display-img {
     margin-left: 3px;
+    pointer-events: none;
 }
 
 .tasks-button {
