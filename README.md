@@ -1,7 +1,3 @@
-<!-- <h1 align="center">
-  <img alt="My Money App" title="My Money App" src="./public/img/demo.gif" />
-</h1> -->
-
 ## 🚀 Tecnologias
 
 ---
@@ -16,6 +12,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 Esse projeto foi desenvolvido para aprimorar meus conhecimentos em React e para por em prática oque venho aprendendo sobre React
 O layout foi totalmente inspirado no site `https://pomofocus.io/`!
+
+Versão responsiva ainda em desenvolvimento
 
 ### Deploy na vercel
 
