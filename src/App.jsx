@@ -38,6 +38,7 @@ const App = () => {
         newTextAfterDelete.splice(taskEdit, 1)
         setTextOfTask(newTextAfterDelete);
         setIsEdit(false);
+        setTextTask();
     }
 
     return (
