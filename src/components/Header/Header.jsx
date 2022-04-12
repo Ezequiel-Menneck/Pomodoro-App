@@ -1,4 +1,5 @@
 import "./Header.css";
+import HeaderButton from "../HeaderButton/HeaderButton";
 
 const Header = () => {
     return (
@@ -9,18 +10,18 @@ const Header = () => {
                 </a>
             </div>
             <div className="pomodoro-buttons">
-                <button className="button-header">
-                    <img src="src\medias\graph-white.png" alt="Report" />
-                    <p> Report</p>
-                </button>
-                <button className="button-header">
-                    <img src="src\medias\config-white.png" alt="Settings" />
-                    <p> Settings</p>
-                </button>
-                <button className="button-header">
-                    <img src="src\medias\user-white.png" alt="Login" />
-                    <p> Login</p>
-                </button>
+                <HeaderButton 
+                    src="src\medias\graph-white.png" 
+                    text="Report"
+                />
+                <HeaderButton
+                    src="src\medias\config-white.png"
+                    text="Settings"
+                />
+                <HeaderButton 
+                    src="src\medias\user-white.png" 
+                    text="Login"
+                />
             </div>
         </div>
     );
