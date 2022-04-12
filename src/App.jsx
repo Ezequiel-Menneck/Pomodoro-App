@@ -13,6 +13,8 @@ const App = () => {
     const [isEdit, setIsEdit] = useState(false);
     const [taskEdit, setTaskEdit] = useState();
 
+    console.log(taskEdit)
+
     const setTask = (text) => {
         setTextOfTask([...textOfTask, text]);
         setIsEdit(false);
@@ -31,10 +33,10 @@ const App = () => {
         setTaskEdit(i)
     };
 
-    const deleteTextOfText = (text) => {
-        const newTextOfTask = [...textOfTask]
-        newTextOfTask.slice()
-        setTextOfTask(newTextOfTask);
+    const deleteTextOfText = () => {
+        const newTextAfterDelete = [...textOfTask]
+        newTextAfterDelete.splice(taskEdit, 1)
+        setTextOfTask(newTextAfterDelete);
         setIsEdit(false);
     }
 

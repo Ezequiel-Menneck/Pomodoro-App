@@ -1,7 +1,14 @@
 import "./AddTask.css";
 import { useState } from "react";
 
-const AddTask = ({ setTask, editTask, deleteTextOfText, textTask, setTextTask, isEdit }) => {
+const AddTask = ({
+    setTask,
+    editTask,
+    deleteTextOfText,
+    textTask,
+    setTextTask,
+    isEdit,
+}) => {
     const [isVisible, setIsVisible] = useState(true);
 
     return (
@@ -36,7 +43,7 @@ const AddTask = ({ setTask, editTask, deleteTextOfText, textTask, setTextTask, i
                             className="addTask-button-delete"
                             onClick={() => {
                                 setIsVisible(true);
-                                deleteTextOfText(textTask)
+                                deleteTextOfText();
                             }}
                         >
                             Delete
